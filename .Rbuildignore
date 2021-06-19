@@ -1,2 +1,5 @@
 ^tmhmminstall\.Rproj$
 ^\.Rproj\.user$
+^.github$
+^LICENSE$
+^appveyor\.yml$

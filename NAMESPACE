@@ -2,4 +2,5 @@
 
 export(install_tmhmm)
 export(install_tmhmm_bin)
+export(set_up_tmhmm)
 export(uninstall_tmhmm)

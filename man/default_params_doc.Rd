@@ -37,7 +37,7 @@ for example \code{c(">Protein 1", "FAMILYVW")}}
 \item{folder_name}{superfolder of TMHMM.
 The superfolder's name is \code{/home/[user_name]/.local/share}
 by default, as can be obtained by
-\link{get_default_tmhmm_folder}}
+\link[tmhmm]{get_default_tmhmm_folder}}
 
 \item{locatome}{text similar to a FASTA file, with protein names
 and the locations of its amino acids}

@@ -4,16 +4,15 @@
 #' @inheritParams default_params_doc
 #' @return Nothing
 #' @examples
-#' \donttest{
-#'   if (is_url_valid() && is_tmhmm_installed()) {
-#'     uninstall_tmhmm()
-#'     install_tmhmm()
-#'   }
+#' if (tmhmm::is_url_valid()) {
+#'   folder_name <- tempfile()
+#'   install_tmhmm(folder_name = folder_name)
+#'   uninstall_tmhmm(folder_name = folder_name)
 #' }
 #' @author Richèl J.C. Bilderbeek
 #' @export
 uninstall_tmhmm <- function(
-  folder_name = get_default_tmhmm_folder()
+  folder_name = tmhmm::get_default_tmhmm_folder()
 ) {
   if (!tmhmm::is_tmhmm_installed(folder_name = folder_name)
   ) {

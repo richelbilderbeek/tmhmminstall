@@ -2,10 +2,10 @@
 % Please edit documentation in R/install_tmhmm.R
 \name{install_tmhmm_bin}
 \alias{install_tmhmm_bin}
-\title{Install the NetMHC2pan binary to a local folder}
+\title{Install the TMHMM binary to a local folder}
 \usage{
 install_tmhmm_bin(
-  download_url = get_tmhmm_url(),
+  download_url = tmhmm::get_tmhmm_url(),
   folder_name = rappdirs::user_data_dir()
 )
 }
@@ -15,10 +15,10 @@ install_tmhmm_bin(
 \item{folder_name}{superfolder of TMHMM.
 The superfolder's name is \code{/home/[user_name]/.local/share}
 by default, as can be obtained by
-\link{get_default_tmhmm_folder}}
+\link[tmhmm]{get_default_tmhmm_folder}}
 }
 \description{
-Install the NetMHC2pan binary to a local folder
+Install the TMHMM binary to a local folder
 }
 \author{
 Richèl J.C. Bilderbeek

@@ -2,11 +2,11 @@
 % Please edit documentation in R/install_tmhmm.R
 \name{install_tmhmm}
 \alias{install_tmhmm}
-\title{Install NetMHC2pan to a local folder}
+\title{Install tmhmm to a local folder}
 \usage{
 install_tmhmm(
-  download_url = get_tmhmm_url(),
-  folder_name = get_default_tmhmm_folder()
+  download_url = tmhmm::get_tmhmm_url(),
+  folder_name = tmhmm::get_default_tmhmm_folder()
 )
 }
 \arguments{
@@ -15,16 +15,18 @@ install_tmhmm(
 \item{folder_name}{superfolder of TMHMM.
 The superfolder's name is \code{/home/[user_name]/.local/share}
 by default, as can be obtained by
-\link{get_default_tmhmm_folder}}
+\link[tmhmm]{get_default_tmhmm_folder}}
 }
 \description{
-Install NetMHC2pan to a local folder
+Install tmhmm to a local folder
 }
 \examples{
-\donttest{
-  if (is_url_valid() && !is_tmhmm_installed()) {
-    install_tmhmm()
-  }
+if (tmhmm::is_url_valid() && !tmhmm::is_tmhmm_installed()) {
+  folder_name <- tempfile()
+
+  install_tmhmm(folder_name = folder_name)
+
+  unlink(folder_name, recursive = TRUE)
 }
 }
 \author{

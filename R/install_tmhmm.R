@@ -1,42 +1,44 @@
-#' Install NetMHC2pan to a local folder
+#' Install tmhmm to a local folder
 #' @inheritParams default_params_doc
 #' @examples
-#' \donttest{
-#'   if (is_url_valid() && !is_tmhmm_installed()) {
-#'     install_tmhmm()
-#'   }
+#' if (tmhmm::is_url_valid() && !tmhmm::is_tmhmm_installed()) {
+#'   folder_name <- tempfile()
+#'
+#'   install_tmhmm(folder_name = folder_name)
+#'
+#'   unlink(folder_name, recursive = TRUE)
 #' }
 #' @author Richèl J.C. Bilderbeek
 #' @export
 install_tmhmm <- function(
-  download_url = get_tmhmm_url(),
-  folder_name = get_default_tmhmm_folder()
+  download_url = tmhmm::get_tmhmm_url(),
+  folder_name = tmhmm::get_default_tmhmm_folder()
 ) {
-  is_bin_installed <- is_tmhmm_bin_installed( # nolint tmhmm function
+  is_bin_installed <- tmhmm::is_tmhmm_bin_installed( # nolint tmhmm function
     folder_name = folder_name
   )
   if (!is_bin_installed) {
-    install_tmhmm_bin( # nolint tmhmm function
+    tmhmminstall::install_tmhmm_bin( # nolint tmhmm function
       download_url = download_url,
       folder_name = folder_name
     )
   }
-  is_set_up <- is_tmhmm_set_up( # nolint tmhmm function
+  is_set_up <- tmhmm::is_tmhmm_set_up( # nolint tmhmm function
     folder_name = folder_name
   )
   if (!is_set_up) {
-    set_up_tmhmm( # nolint tmhmm function
+    tmhmminstall::set_up_tmhmm( # nolint tmhmm function
       folder_name = folder_name
     )
   }
 }
 
-#' Install the NetMHC2pan binary to a local folder
+#' Install the TMHMM binary to a local folder
 #' @inheritParams default_params_doc
 #' @author Richèl J.C. Bilderbeek
 #' @export
 install_tmhmm_bin <- function(
-  download_url = get_tmhmm_url(),
+  download_url = tmhmm::get_tmhmm_url(),
   folder_name = rappdirs::user_data_dir()
 ) {
   bin_path <- file.path(folder_name, "tmhmm-2.0c", "bin", "tmhmm")
