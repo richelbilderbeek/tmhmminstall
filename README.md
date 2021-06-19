@@ -1,2 +1,9 @@
 # tmhmminstall
+
+Branch   |[![GitHub Actions logo](man/figures/GitHubActions.png)](https://github.com/richelbilderbeek/tmhmminstall/actions)|[![AppVeyor logo](man/figures/AppVeyor.png)](https://ci.appveyor.com/project/richelbilderbeek/tmhmminstall/)                                                                                 |[![Codecov logo](man/figures/Codecov.png)](https://www.codecov.io)
+---------|-----------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------
+`master` |![R-CMD-check](https://github.com/richelbilderbeek/tmhmminstall/workflows/R-CMD-check/badge.svg?branch=master)   |[![AppVeyor build status](https://ci.appveyor.com/api/projects/status/github/richelbilderbeek/tmhmminstall?branch=master&svg=true)](https://ci.appveyor.com/project/richelbilderbeek/tmhmminstall) |[![codecov.io](https://codecov.io/github/richelbilderbeek/tmhmminstall/coverage.svg?branch=master)](https://codecov.io/github/richelbilderbeek/tmhmminstall/branch/master)
+`develop`|![R-CMD-check](https://github.com/richelbilderbeek/tmhmminstall/workflows/R-CMD-check/badge.svg?branch=develop)  |[![AppVeyor build status](https://ci.appveyor.com/api/projects/status/github/richelbilderbeek/tmhmminstall?branch=develop&svg=true)](https://ci.appveyor.com/project/richelbilderbeek/tmhmminstall)|[![codecov.io](https://codecov.io/github/richelbilderbeek/tmhmminstall/coverage.svg?branch=develop)](https://codecov.io/github/richelbilderbeek/tmhmminstall/branch/develop)
+
+
 tmhmm install
